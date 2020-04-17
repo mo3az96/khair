@@ -1,0 +1,113 @@
+header {
+    .mo-menu-icon {
+        font-size: 18px;
+        color: $text;
+        display: none;
+    }
+
+    .close-btn {
+        font-size: 18px;
+        color: $gold;
+        display: none;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+
+        #{$ltr} & {
+            right: 25px;
+            left: auto;
+        }
+    }
+
+    @include xs {
+        .top-bar {
+            height: 25px;
+            line-height: 25px;
+        }
+
+        .close-btn {
+            display: block;
+        }
+
+        .header {
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+
+        .mo-menu-icon {
+            display: block;
+        }
+
+        .xs-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba($text, 0.3);
+            z-index: 99;
+            display: none;
+        }
+
+        .second-header {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 280px;
+            background-color: $fff;
+            z-index: 99;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 80px 25px 50px;
+            margin: 0;
+            transform-origin: right;
+            transform: scaleX(0);
+            @include transition(all 0.5s ease-in-out);
+
+            #{$ltr} & {
+                transform-origin: left;
+            }
+
+            &.nav-in {
+                transform: scaleX(1);
+            }
+        }
+
+        .mo-navbar {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        .nav-li {
+            padding: 0;
+            margin: 7px 0;
+            line-height: unset;
+            width: 100%;
+
+            &.active {
+                background-color: transparent;
+
+                .nav-anchor {
+                    color: $gold;
+                }
+            }
+        }
+
+        .nav-anchor {
+            width: 100%;
+        }
+
+        .country {
+            margin-top: 30px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .courncy .lang-anchor:before {
+            margin: 0 15px;
+        }
+    }
+}

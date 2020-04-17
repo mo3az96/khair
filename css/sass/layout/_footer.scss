@@ -1,0 +1,182 @@
+footer {
+    padding-top: 75px;
+    background-color: $text;
+    overflow: hidden;
+
+    @include xs {
+        padding-top: 50px;
+    }
+
+    .logo {
+        @include xs {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+    }
+
+    .contact-foot {
+        padding-right: 65px;
+        border-right: 1px solid rgba(#DEDEDE, 0.39);
+
+        @include sm {
+            padding: 0;
+            border: none;
+            margin-top: 35px;
+        }
+
+        #{$ltr} & {
+            padding: 0;
+            border: none;
+            padding-left: 65px;
+            border-left: 1px solid rgba(#DEDEDE, 0.39);
+
+            @include sm {
+                padding: 0;
+                border: none;
+            }
+        }
+    }
+
+    .join-cont {
+        border-radius: 25px;
+        overflow: hidden;
+        position: relative;
+
+        .join-input {
+            height: 50px;
+            width: 100%;
+            padding: 0 25px;
+            color: $text;
+            font-size: 15px;
+            text-align: right;
+
+            #{$ltr} & {
+                text-align: left;
+            }
+
+            &::placeholder {
+                color: #D2D2D2;
+            }
+        }
+
+        .join-button {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 79px;
+            background-color: $gold;
+            font-size: 15px;
+            color: $fff;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .new-head {
+        font-size: 15px;
+        color: #D2D2D2;
+        margin-bottom: 27px;
+
+        @include sm {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    .foot-nav {
+        @include xs {
+            width: max-content;
+            margin: auto;
+        }
+    }
+
+    .foot-head {
+        font-size: 15px;
+        color: $gold;
+        margin-bottom: 27px;
+        margin-bottom: 20px;
+    }
+
+    .foot-li {
+        margin-bottom: 15px;
+
+        @include xs {
+            margin-bottom: 10px;
+        }
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+
+    .foot-anchor {
+        font-size: 15px;
+        color: #FFFFFF;
+        display: inline-flex;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover {
+            color: $gold;
+            transform: translateX(-5px);
+
+            #{$ltr} & {
+                transform: translateX(5px);
+            }
+        }
+    }
+
+    .follow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 15px;
+        color: #D2D2D2;
+        margin-top: 15px;
+    }
+
+    .social {
+        display: flex;
+
+        .social-link {
+            font-size: 16px;
+            color: $fff;
+            margin-left: 20px;
+
+            #{$ltr} & {
+                margin-left: 0;
+                margin-right: 20px;
+            }
+
+            &:last-of-type {
+                margin-left: 0;
+
+                #{$ltr} & {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+
+            @include transition(all 0.3s ease-in-out);
+
+            &:hover {
+                color: $gold;
+            }
+        }
+    }
+}
+
+.copyright {
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #D2D2D2;
+    font-size: 15px;
+    margin-top: 75px;
+
+    @include xs {
+        margin-top: 30px;
+    }
+}

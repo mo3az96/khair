@@ -1,0 +1,257 @@
+.top-bar {
+    height: 40px;
+    line-height: 40px;
+    background-color: $text;
+    text-align: left;
+
+    #{$ltr} & {
+        text-align: right;
+    }
+}
+
+.log-btn {
+    color: $fff;
+    font-size: 14px;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        color: $gold;
+    }
+}
+
+.top-num {
+    font-size: 16px;
+    color: $fff;
+
+    &::before {
+        content: "|";
+        margin-left: 13px;
+        margin-right: 7px;
+
+        #{$ltr} & {
+            margin-left: 7px;
+            margin-right: 13px;
+        }
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 38px 0;
+
+    @include sm {
+        padding: 20px 0;
+    }
+}
+
+.logo {
+    display: block;
+}
+
+.second-header {
+    flex: 1;
+    margin-right: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include sm {
+        margin-right: 30px;
+    }
+
+    #{$ltr} & {
+        margin-left: 110px;
+        margin-right: 0;
+
+        @include sm {
+            margin-left: 30px;
+        }
+    }
+}
+
+.country {
+    display: flex;
+    align-items: center;
+}
+
+.lang {
+    position: relative;
+
+    .lang-anchor {
+        font-size: 16px;
+        color: $text;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        @include transition(all 0.3s ease-in-out);
+
+        img {
+            margin-left: 7px;
+
+            #{$ltr} & {
+                margin-right: 7px;
+                margin-left: 0;
+            }
+        }
+
+        &:after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f078";
+            font-size: 8px;
+            margin-right: 8px;
+
+            #{$ltr} & {
+                margin-right: 0;
+                margin-left: 8px;
+            }
+        }
+
+        &:hover {
+            color: $gold;
+
+            &:after {
+                color: $gold;
+            }
+        }
+
+    }
+
+    &:hover {
+        .dropdown {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0) translateX(50%);
+        }
+    }
+}
+
+.courncy {
+    position: relative;
+
+    .lang-anchor {
+        font-size: 16px;
+        color: $gold;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        @include transition(all 0.3s ease-in-out);
+
+        img {
+            margin-left: 7px;
+
+            #{$ltr} & {
+                margin-right: 7px;
+                margin-left: 0;
+            }
+        }
+
+        &:after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 8px;
+            content: "\f078";
+            margin-right: 8px;
+            color: $text;
+
+            #{$ltr} & {
+                margin-right: 0;
+                margin-left: 8px;
+            }
+        }
+
+        &:before {
+            content: "|";
+            color: #2D3E50;
+            margin-left: 13px;
+            margin-right: 7px;
+
+            #{$ltr} & {
+                margin-left: 7px;
+                margin-right: 13px;
+            }
+        }
+
+        &:hover {
+            color: $text;
+        }
+
+    }
+
+
+
+    &:hover {
+        .dropdown {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0) translateX(50%);
+        }
+    }
+}
+
+
+.dropdown {
+    position: absolute;
+    width: 121px;
+    height: auto;
+    right: 50%;
+    top: 100%;
+    z-index: 10;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.13);
+    padding: 10px 10px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+    @include transition(all 0.3s ease-in-out);
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px) translateX(50%);
+
+
+
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        display: block;
+        border-width: 6px;
+        border-color: transparent transparent #ffffff;
+        border-style: solid;
+        top: -12px;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .drop-anchor {
+        width: 100%;
+        border-bottom: 1px solid rgba($text, 0.3);
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        justify-content: center;
+        color: $text;
+        @include transition(all 0.3s ease-in-out);
+        font-size: 15px;
+
+        &:hover {
+            color: $gold;
+        }
+
+        &:last-of-type {
+            border: none;
+        }
+
+        &:after {
+            display: none;
+        }
+    }
+
+
+}

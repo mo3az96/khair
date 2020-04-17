@@ -1,0 +1,23 @@
+body {
+    position: relative;
+    font-family: reg;
+
+    &::-webkit-scrollbar {
+        background-color: $fff;
+        width: 7px;
+        height: 0px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $gold;
+    }
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: $gold $fff;
+}
+
+.overflow {
+    overflow: hidden !important;
+}

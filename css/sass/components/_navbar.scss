@@ -1,0 +1,36 @@
+.mo-navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-li {
+    margin: 0 20px;
+    padding: 0 13px;
+    line-height: 32px;
+    border-radius: 32px;
+    background-color: transparent;
+
+    @include sm {
+        margin: 0 10px;
+        padding: 0 5px;
+    }
+
+
+    &.active {
+        background-color: $gold;
+
+        .nav-anchor {
+            color: $fff;
+        }
+    }
+}
+
+.nav-anchor {
+    font-size: 16px;
+    color: $text;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        color: $gold;
+    }
+}

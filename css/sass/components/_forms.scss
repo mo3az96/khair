@@ -1,0 +1,95 @@
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include xs {
+        flex-wrap: wrap;
+    }
+}
+
+.select {
+    width: 262px;
+    height: 48px;
+    border-radius: 24px;
+    border: 1px solid $gold;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @include md {
+        width: 200px;
+    }
+
+    @include xs {
+        width: calc(50% - 5px);
+        margin-left: 10px;
+        margin-bottom: 15px;
+
+        #{$ltr} & {
+            margin-left: 0;
+            margin-right: 10px;
+        }
+
+        &:nth-of-type(2n) {
+            margin-left: 0;
+
+            #{$ltr} & {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+
+    &:after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f078";
+        position: absolute;
+        left: 19px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: #2D3E50;
+
+        #{$ltr} & {
+            right: 19px;
+            left: auto;
+        }
+    }
+}
+
+.form-select {
+    width: 100%;
+    height: 100%;
+    color: $text;
+    font-size: 17px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.submit-select {
+    width: 165px;
+    height: 48px;
+    border: 1px solid $gold;
+    text-align: center;
+    line-height: 48px;
+    border-radius: 24px;
+    font-size: 17px;
+    color: $fff;
+    background-color: $gold;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        background-color: transparent;
+        color: #2D3E50;
+    }
+
+    @include xs {
+        width: calc(50% - 5px);
+        margin: 0;
+        margin-bottom: 15px;
+    }
+}
