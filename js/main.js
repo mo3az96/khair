@@ -85,4 +85,22 @@ $(document).ready(function () {
             }
         });
     }
+
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        slidesPerView: 3,
+        breakpoints: {
+            0: {
+                spaceBetween: 15,
+            },
+            991: {
+                spaceBetween: 30,
+            },
+        }
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+        spaceBetween: 10,
+        thumbs: {
+            swiper: galleryThumbs,
+        },
+    });
 });

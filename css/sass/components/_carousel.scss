@@ -55,6 +55,10 @@
         background: none;
         @include transition(all 0.3s ease-in-out);
 
+        &:after {
+            display: none;
+        }
+
         @include xs {
             display: none;
         }
@@ -215,6 +219,8 @@
         background-color: transparent;
         font-size: 18px;
         @include transition(all 0.3s ease-in-out);
+
+
 
         &:hover {
             background-color: $gold;
