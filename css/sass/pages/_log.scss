@@ -1,0 +1,317 @@
+.page-title {
+    font-size: 34px;
+    color: $text;
+    text-align: center;
+    margin-bottom: 55px;
+
+    @include sm {
+        font-size: 25px;
+        margin-bottom: 40px;
+    }
+}
+
+.page-flex {
+    display: flex;
+
+    @include sm {
+        flex-direction: column;
+    }
+}
+
+.form-cont {
+    width: 50%;
+
+    @include sm {
+        width: 100%;
+    }
+
+    &:last-of-type {
+        border-right: 1px solid #979797;
+
+        @include sm {
+            border: none;
+        }
+    }
+
+    form {
+        width: 360px;
+        margin: auto;
+        text-align: center;
+
+        @include sm {
+            width: 100%;
+        }
+
+        &.reg {
+            @include sm {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+.form-head {
+    text-align: center;
+    font-size: 21px;
+    color: $text;
+}
+
+.form-sub {
+    text-align: center;
+    font-size: 16px;
+    color: $text;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.log-input {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 48px;
+    border-radius: 24px;
+    padding: 0 22px;
+    color: $text;
+    border: 1px solid #979797;
+    text-align: right;
+    @include transition(all 0.3s ease-in-out);
+
+    &::placeholder {
+        color: $text;
+    }
+
+    &:focus {
+        border-color: $gold;
+    }
+
+    #{$ltr} & {
+        text-align: left;
+    }
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 15px;
+    color: $text;
+    margin: 20px 0;
+
+    input {
+        width: 18px;
+        height: 18px;
+        margin-left: 11px;
+        border-radius: 2px;
+
+        #{$ltr} & {
+            margin-right: 11px;
+            margin-left: 0;
+        }
+    }
+}
+
+.log-submit {
+    display: block;
+    width: 100%;
+    height: 48px;
+    border: 1px solid $gold;
+    text-align: center;
+    line-height: 48px;
+    border-radius: 24px;
+    font-size: 15px;
+    color: $fff;
+    background-color: $gold;
+    @include transition(all 0.3s ease-in-out);
+
+    #{$ltr} & {
+        margin-left: auto;
+        margin-right: 0;
+
+        @include xs {
+            margin: auto;
+        }
+    }
+
+    &:hover {
+        background-color: transparent;
+        color: #2D3E50;
+    }
+
+}
+
+.forget-cont {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 15px;
+
+    .forget {
+        font-size: 15px;
+        color: $text;
+    }
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 226px;
+    height: 48px;
+    margin-top: 30px;
+    margin-bottom: 34px;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked {
+            +.slider {
+                &:before {
+                    left: 100%;
+                    transform: translateX(-100%);
+
+                    #{$ltr} & {
+                        left: auto;
+                        right: 100%;
+                        transform: translateX(100%);
+                    }
+                }
+
+                +.text {
+                    span {
+                        color: $fff;
+
+                        &:last-of-type {
+                            color: $text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: transparent;
+        border: 1px solid $gold;
+        @include transition(all 0.3s ease-in-out);
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 113px;
+            left: 0;
+            bottom: 0;
+            background-color: $gold;
+            @include transition(all 0.3s ease-in-out);
+
+            #{$ltr} & {
+                left: auto;
+                right: 0;
+            }
+        }
+
+        &.round {
+            border-radius: 24px;
+
+            &::before {
+                border-radius: 24px;
+            }
+        }
+    }
+
+    .text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        padding: 0 40px;
+        justify-content: space-between;
+        font-size: 15px;
+
+        #{$ltr} & {
+            padding: 0 20px;
+        }
+
+
+        span {
+            color: $text;
+            @include transition(all 0.3s ease-in-out);
+
+
+            &:last-of-type {
+                color: $fff;
+            }
+        }
+    }
+}
+
+.line {
+    display: flex;
+
+    .select {
+        margin-left: 15px;
+        margin-bottom: 20px;
+        border-color: #979797;
+
+        #{$ltr} & {
+            margin-right: 15px;
+            margin-left: 0;
+        }
+
+        &:last-of-type {
+            margin-left: 0;
+
+            #{$ltr} & {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.input-cont {
+    position: relative;
+    cursor: pointer;
+
+    .log-input {
+        cursor: pointer;
+    }
+
+    &:after {
+        content: "\f073";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 19px;
+        top: 50%;
+        font-size: 18px;
+        color: $text;
+        transform: translateY(-50%);
+
+        #{$ltr} & {
+            left: auto;
+            right: 19px;
+        }
+    }
+}
+
+.cond {
+    font-size: 15px;
+    color: $text;
+    margin-bottom: 30px;
+
+    a {
+        color: $gold;
+    }
+}

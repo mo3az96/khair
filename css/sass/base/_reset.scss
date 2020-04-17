@@ -1,6 +1,7 @@
 body {
     position: relative;
     font-family: reg;
+    text-transform: capitalize;
 
     &::-webkit-scrollbar {
         background-color: $fff;

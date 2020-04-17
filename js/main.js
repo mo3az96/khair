@@ -54,28 +54,35 @@ $(document).ready(function () {
             $(".lang").removeClass("lang-in");
         });
     }
-
+    $('.reg #dateinput').datepicker({
+        format: "dd/mm/yyyy",
+        startView: 0,
+        minViewMode: 0,
+        maxViewMode: 2
+    });
 
     $('.text-show').click(function () {
         $(this).siblings(".span-hide").show();
         $(this).hide();
     });
-    var a = 0;
-    $(window).scroll(function () {
-        if (a == 0 && $(this).scrollTop() >= ($(".num").offset().top) - 500) {
-            $('.num').each(function () {
-                $(this).prop('Counter', 0).animate({
-                    Counter: $(this).text()
-                }, {
-                    duration: 1000,
-                    easing: 'swing',
-                    step: function (now) {
-                        $(this).text(Math.ceil(now));
-                    }
+    if ($("span").hasClass("num")) {
+        var a = 0;
+        $(window).scroll(function () {
+            if (a == 0 && $(this).scrollTop() >= ($(".num").offset().top) - 500) {
+                $('.num').each(function () {
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 1000,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
                 });
-            });
-            console.log($('.num'));
-            a++
-        }
-    });
+                console.log($('.num'));
+                a++
+            }
+        });
+    }
 });
