@@ -48,6 +48,17 @@
   text-decoration: none;
 }
 
+@media (max-width: 767px) {
+  .page-cover {
+    height: 150px;
+  }
+  .page-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 body {
   position: relative;
   font-family: reg;
@@ -1965,9 +1976,12 @@ html[dir=ltr] header .close-btn {
   left: auto;
 }
 @media (max-width: 767px) {
+  header {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  }
   header .top-bar {
-    height: 25px;
-    line-height: 25px;
+    height: 30px;
+    line-height: 30px;
   }
   header .close-btn {
     display: block;

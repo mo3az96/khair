@@ -20,9 +20,11 @@ header {
     }
 
     @include xs {
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+
         .top-bar {
-            height: 25px;
-            line-height: 25px;
+            height: 30px;
+            line-height: 30px;
         }
 
         .close-btn {
