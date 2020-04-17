@@ -48,17 +48,6 @@
   text-decoration: none;
 }
 
-@media (max-width: 767px) {
-  .page-cover {
-    height: 150px;
-  }
-  .page-cover img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
 body {
   position: relative;
   font-family: reg;
@@ -994,10 +983,10 @@ html[dir=ltr] .courncy .lang-anchor:before {
   }
 }
 
-.page-head {
+.page-cover {
   position: relative;
 }
-.page-head::before {
+.page-cover::before {
   background-color: rgba(40, 57, 87, 0.6);
   top: 0;
   left: 0;
@@ -1005,6 +994,16 @@ html[dir=ltr] .courncy .lang-anchor:before {
   bottom: 0;
   content: "";
   position: absolute;
+}
+@media (max-width: 767px) {
+  .page-cover {
+    height: 150px;
+  }
+  .page-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .about-sec {
