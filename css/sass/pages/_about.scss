@@ -1,0 +1,36 @@
+.about-sec {
+    margin-top: 70px;
+
+    @include xs {
+        margin-top: 40px;
+    }
+}
+
+.about-head {
+    font-size: 30px;
+    color: $gold;
+    margin-bottom: 33px;
+
+    @include xs {
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+.about-text {
+    color: #9D9D9D;
+    font-size: 18px;
+
+    @include xs {
+        text-align: justify;
+    }
+}
+
+.page-content {
+    margin-bottom: 70px;
+
+    @include xs {
+        margin-bottom: 40px;
+    }
+}

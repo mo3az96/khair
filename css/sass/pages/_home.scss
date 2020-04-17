@@ -53,3 +53,17 @@
         margin-bottom: 50px;
     }
 }
+
+.page-head {
+    position: relative;
+
+    &::before {
+        background-color: rgba(40, 57, 87, 0.6);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        position: absolute;
+    }
+}
