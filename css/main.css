@@ -993,18 +993,21 @@ html[dir=ltr] .courncy .lang-anchor:before {
 }
 
 .about-sec {
-  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.about-sec:last-of-type() {
+  margin-bottom: 0;
 }
 @media (max-width: 767px) {
   .about-sec {
-    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }
 
 .about-head {
   font-size: 30px;
   color: #E4AA3C;
-  margin-bottom: 33px;
+  margin-bottom: 30px;
 }
 @media (max-width: 767px) {
   .about-head {
@@ -1025,12 +1028,175 @@ html[dir=ltr] .courncy .lang-anchor:before {
 }
 
 .page-content {
-  margin-bottom: 70px;
+  margin: 70px 0;
 }
 @media (max-width: 767px) {
   .page-content {
+    margin: 40px 0;
+  }
+}
+
+.contact-method {
+  margin-bottom: 15px;
+}
+.contact-method a {
+  font-size: 18px;
+  color: #214D74;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.contact-method a:hover {
+  color: #E4AA3C;
+}
+.contact-method a i {
+  font-size: 16px;
+  width: 25px;
+  color: #E4AA3C;
+}
+
+@media (max-width: 767px) {
+  .contact-info {
     margin-bottom: 40px;
   }
+}
+.contact-info .social {
+  margin-top: 15px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(112, 112, 112, 0.3);
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .contact-info .social {
+    justify-content: center;
+  }
+}
+.contact-info .social-link {
+  font-size: 18px;
+  color: #214D74;
+  margin-left: 20px;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+html[dir=ltr] .contact-info .social-link {
+  margin-left: 0;
+  margin-right: 20px;
+}
+.contact-info .social-link:last-of-type {
+  margin-left: 0;
+}
+html[dir=ltr] .contact-info .social-link:last-of-type {
+  margin-left: 0;
+  margin-right: 0;
+}
+.contact-info .social-link:hover {
+  color: #E4AA3C;
+}
+
+.contact-form .line {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .contact-form .line {
+    flex-direction: column;
+  }
+}
+.contact-form .contact-input {
+  margin-left: 30px;
+  margin-bottom: 30px;
+  width: 50%;
+  height: 48px;
+  border-radius: 24px;
+  padding: 0 22px;
+  color: #214D74;
+  border: 1px solid #E4AA3C;
+  text-align: right;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 767px) {
+  .contact-form .contact-input {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+}
+.contact-form .contact-input::placeholder {
+  color: #214D74;
+}
+html[dir=ltr] .contact-form .contact-input {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 30px;
+}
+@media (max-width: 767px) {
+  html[dir=ltr] .contact-form .contact-input {
+    margin-right: 0;
+  }
+}
+.contact-form .contact-input:focus {
+  border-color: #214D74;
+}
+.contact-form .contact-input:last-of-type {
+  margin-left: 0;
+}
+html[dir=ltr] .contact-form .contact-input:last-of-type {
+  margin-right: 0;
+}
+.contact-form .contact-input.contact-area {
+  height: 248px;
+  border-radius: 8px;
+  padding: 15px 22px;
+  width: 100%;
+  resize: none;
+}
+@media (max-width: 767px) {
+  .contact-form .contact-input.contact-area {
+    height: 150px;
+  }
+}
+
+.contact-submit {
+  display: block;
+  width: 122px;
+  height: 48px;
+  border: 1px solid #E4AA3C;
+  text-align: center;
+  line-height: 48px;
+  border-radius: 24px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #E4AA3C;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-right: auto;
+}
+@media (max-width: 767px) {
+  .contact-submit {
+    margin: auto;
+  }
+}
+html[dir=ltr] .contact-submit {
+  margin-left: auto;
+  margin-right: 0;
+}
+@media (max-width: 767px) {
+  html[dir=ltr] .contact-submit {
+    margin: auto;
+  }
+}
+.contact-submit:hover {
+  background-color: transparent;
+  color: #2D3E50;
 }
 
 footer {
