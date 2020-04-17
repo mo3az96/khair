@@ -2024,6 +2024,7 @@ html[dir=ltr] header .close-btn {
   }
   html[dir=ltr] header .second-header {
     transform-origin: left;
+    margin: 0;
   }
   header .second-header.nav-in {
     transform: scaleX(1);
