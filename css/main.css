@@ -2005,7 +2005,7 @@ html[dir=ltr] header .close-btn {
   header .second-header {
     position: absolute;
     top: 0;
-    bottom: 0;
+    min-height: 100vh;
     width: 280px;
     background-color: #fff;
     z-index: 99;
@@ -2014,7 +2014,7 @@ html[dir=ltr] header .close-btn {
     justify-content: flex-start;
     padding: 80px 25px 50px;
     margin: 0;
-    transform-origin: right;
+    transform-origin: right top;
     transform: scaleX(0);
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
@@ -2022,7 +2022,7 @@ html[dir=ltr] header .close-btn {
     transition: all 0.5s ease-in-out;
   }
   html[dir=ltr] header .second-header {
-    transform-origin: left;
+    transform-origin: left top;
     margin: 0;
   }
   header .second-header.nav-in {
