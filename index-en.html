@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/swiper.min.css" />
     <link rel="stylesheet" href="css/fontawesome.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/bootstrap-select.min.css" />
     <link rel="stylesheet" href="css/bootstrap-datepicker.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -50,14 +51,14 @@
                     <div class="country">
                         <div class="lang">
                             <span class="fixall lang-anchor">English</span>
-                            <div class="dropdown">
+                            <div class="menu-dropdown">
                                 <a href="index.html" class="fixall drop-anchor">Arabic</a>
                                 <a href="index-en.html" class="fixall drop-anchor">English</a>
                             </div>
                         </div>
                         <div class="courncy">
                             <span class="fixall lang-anchor">KWD</span>
-                            <div class="dropdown">
+                            <div class="menu-dropdown">
                                 <a href="#!" class="fixall drop-anchor">KWD</a>
                                 <a href="#!" class="fixall drop-anchor">SAR</a>
                                 <a href="#!" class="fixall drop-anchor">EGP</a>
@@ -203,30 +204,24 @@
         <div class="container">
             <h2 class="head fixall wow fadeInUp">Search by beneficiary status</h2>
             <form class=" search-form wow fadeInUp" data-wow-delay="0.2s">
-                <div class="select">
-                    <select class="form-select fixall">
-                        <option disabled selected hidden> country</option>
-                        <option value="0">الكويت</option>
-                        <option value="1">السعودية</option>
-                        <option value="2">مصر</option>
-                    </select>
-                </div>
-                <div class="select">
-                    <select class="form-select fixall">
-                        <option disabled selected hidden> section</option>
-                        <option value="0">قسم 1</option>
-                        <option value="1">قسم 2</option>
-                        <option value="2">قسم 3</option>
-                    </select>
-                </div>
-                <div class="select">
-                    <select class="form-select fixall">
-                        <option disabled selected hidden> type of help</option>
-                        <option value="0">نوع 1</option>
-                        <option value="1">نوع 2</option>
-                        <option value="2">نوع 3</option>
-                    </select>
-                </div>
+                <select class="selectpicker select">
+                    <option hidden>country</option>
+                    <option value="0">الكويت</option>
+                    <option value="1">السعودية</option>
+                    <option value="2">مصر</option>
+                </select>
+                <select class="selectpicker select">
+                    <option hidden>section</option>
+                    <option value="0">قسم 1</option>
+                    <option value="1">قسم 2</option>
+                    <option value="2">قسم 3</option>
+                </select>
+                <select class="selectpicker select">
+                    <option hidden>aid type</option>
+                    <option value="0">نوع 1</option>
+                    <option value="1">نوع 2</option>
+                    <option value="2">نوع 3</option>
+                </select>
                 <button class="submit-select fixall">Search</button>
             </form>
             <div class="products">
@@ -473,11 +468,15 @@
     </footer>
     <!-- end footer -->
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

@@ -119,7 +119,7 @@
     }
 
     &:hover {
-        .dropdown {
+        .menu-dropdown {
             visibility: visible;
             opacity: 1;
             transform: translateY(0) translateX(50%);
@@ -182,7 +182,7 @@
 
 
     &:hover {
-        .dropdown {
+        .menu-dropdown {
             visibility: visible;
             opacity: 1;
             transform: translateY(0) translateX(50%);
@@ -191,7 +191,7 @@
 }
 
 
-.dropdown {
+.menu-dropdown {
     position: absolute;
     width: 121px;
     height: auto;

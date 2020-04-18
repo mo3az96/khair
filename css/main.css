@@ -90,66 +90,6 @@ html {
   }
 }
 
-.select {
-  width: 262px;
-  height: 48px;
-  border-radius: 24px;
-  border: 1px solid #E4AA3C;
-  padding: 5px 15px;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-@media (max-width: 1199px) {
-  .select {
-    width: 200px;
-  }
-}
-@media (max-width: 767px) {
-  .select {
-    width: calc(50% - 5px);
-    margin-left: 10px;
-    margin-bottom: 15px;
-  }
-  html[dir=ltr] .select {
-    margin-left: 0;
-    margin-right: 10px;
-  }
-  .select:nth-of-type(2n) {
-    margin-left: 0;
-  }
-  html[dir=ltr] .select:nth-of-type(2n) {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-.select:after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "";
-  position: absolute;
-  left: 19px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 16px;
-  color: #2D3E50;
-}
-html[dir=ltr] .select:after {
-  right: 19px;
-  left: auto;
-}
-
-.form-select {
-  width: 100%;
-  height: 100%;
-  color: #214D74;
-  font-size: 17px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: transparent !important;
-}
-
 .submit-select {
   width: 165px;
   height: 48px;
@@ -688,6 +628,101 @@ html[dir=ltr] .product .add-to i {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0);
 }
 
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  width: 262px;
+  position: relative;
+}
+@media (max-width: 1199px) {
+  .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 200px;
+  }
+}
+@media (max-width: 767px) {
+  .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: calc(50% - 5px);
+    margin-left: 10px;
+    margin-bottom: 15px;
+  }
+  html[dir=ltr] .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn):nth-of-type(2n) {
+    margin-left: 0;
+  }
+  html[dir=ltr] .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn):nth-of-type(2n) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-toggle {
+  width: 100%;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  height: 48px;
+  border-radius: 24px;
+  border: 1px solid #E4AA3C;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-toggle .filter-option-inner-inner {
+  text-align: right;
+  color: #214D74;
+  font-size: 17px;
+}
+html[dir=ltr] .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-toggle .filter-option-inner-inner {
+  text-align: left;
+}
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-toggle:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  border: none;
+  font-size: 16px;
+  color: #2D3E50;
+  margin: 0;
+}
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu {
+  z-index: 99991 !important;
+  border: none;
+  border-radius: 10px;
+  border: 1px solid #E4AA3C;
+  background-color: #fff;
+}
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu .dropdown-menu {
+  border: none;
+  background-color: #fff;
+}
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu a {
+  background-color: #fff !important;
+  color: #214D74;
+  font-size: 16px;
+  transition: 0.3s;
+  border-radius: 0;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu a:hover {
+  color: #E4AA3C;
+}
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu .active {
+  color: #E4AA3C;
+}
+
+.line .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-toggle {
+  border: 1px solid #979797;
+}
+.line .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu {
+  border: 1px solid #979797;
+}
+.line .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu .dropdown-menu {
+  border: none;
+}
+
 .top-bar {
   height: 40px;
   line-height: 40px;
@@ -804,7 +839,7 @@ html[dir=ltr] .lang .lang-anchor:after {
 .lang .lang-anchor:hover:after {
   color: #E4AA3C;
 }
-.lang:hover .dropdown {
+.lang:hover .menu-dropdown {
   visibility: visible;
   opacity: 1;
   transform: translateY(0) translateX(50%);
@@ -856,13 +891,13 @@ html[dir=ltr] .courncy .lang-anchor:before {
 .courncy .lang-anchor:hover {
   color: #214D74;
 }
-.courncy:hover .dropdown {
+.courncy:hover .menu-dropdown {
   visibility: visible;
   opacity: 1;
   transform: translateY(0) translateX(50%);
 }
 
-.dropdown {
+.menu-dropdown {
   position: absolute;
   width: 121px;
   height: auto;
@@ -887,7 +922,7 @@ html[dir=ltr] .courncy .lang-anchor:before {
   opacity: 0;
   transform: translateY(20px) translateX(50%);
 }
-.dropdown:before {
+.menu-dropdown:before {
   content: "";
   width: 0;
   height: 0;
@@ -900,7 +935,7 @@ html[dir=ltr] .courncy .lang-anchor:before {
   right: 50%;
   transform: translateX(50%);
 }
-.dropdown .drop-anchor {
+.menu-dropdown .drop-anchor {
   width: 100%;
   border-bottom: 1px solid rgba(33, 77, 116, 0.3);
   padding-bottom: 5px;
@@ -913,13 +948,13 @@ html[dir=ltr] .courncy .lang-anchor:before {
   transition: all 0.3s ease-in-out;
   font-size: 15px;
 }
-.dropdown .drop-anchor:hover {
+.menu-dropdown .drop-anchor:hover {
   color: #E4AA3C;
 }
-.dropdown .drop-anchor:last-of-type {
+.menu-dropdown .drop-anchor:last-of-type {
   border: none;
 }
-.dropdown .drop-anchor:after {
+.menu-dropdown .drop-anchor:after {
   display: none;
 }
 
