@@ -10,8 +10,10 @@ $(document).ready(function () {
             el: '.main-slider .swiper-pagination',
             clickable: true,
         },
-        navigation: false,
-        autoplay: false,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
         spaceBetween: 10,
         loop: true,
         navigation: {
@@ -25,8 +27,11 @@ $(document).ready(function () {
             el: '.about-slider .swiper-pagination',
             clickable: true,
         },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
         navigation: false,
-        autoplay: false,
         spaceBetween: 10,
         loop: false,
     });
@@ -88,6 +93,7 @@ $(document).ready(function () {
 
     var galleryThumbs = new Swiper('.gallery-thumbs', {
         slidesPerView: 3,
+
         breakpoints: {
             0: {
                 spaceBetween: 15,
