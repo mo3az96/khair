@@ -182,3 +182,31 @@
         }
     }
 }
+
+
+.add-prob-form {
+    margin-top: 30px;
+
+    .bootstrap-select {
+        &:not([class*=col-]) {
+            &:not([class*=form-control]) {
+                &:not(.input-group-btn) {
+                    width: 100%;
+                    margin-bottom: 20px;
+
+                    .dropdown-toggle {
+                        border: 1px solid #979797;
+                    }
+
+                    .dropdown-menu {
+                        border: 1px solid #979797;
+
+                        .dropdown-menu {
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

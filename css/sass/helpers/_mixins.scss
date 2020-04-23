@@ -7,11 +7,6 @@
 
 // @include transition(all 0.3s ease-in-out);
 
-@mixin flex($align-items, $justify-content) {
-    display: flex;
-    align-items: $align-items;
-    justify-content: $justify-content;
-}
 
 @mixin lg {
     @media (max-width: 1400px) {

@@ -3,6 +3,9 @@ $(window).on("load", function () {
 });
 $(document).ready(function () {
     new WOW().init();
+    $('.side-head').click(function () {
+        $(".side-links").slideToggle(400);
+    });
 
     //////////////////////////////////////////////
     var mainswiper = new Swiper('.main-slider .swiper-container', {

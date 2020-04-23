@@ -1,0 +1,440 @@
+.sidebar {
+    &::before {
+        width: 100%;
+        height: 6px;
+        background: rgb(65, 167, 204);
+        background: linear-gradient(0deg, rgba(65, 167, 204, 1) 0%, rgba(40, 57, 87, 1) 100%);
+        content: "";
+        display: block;
+    }
+
+    .side-head {
+        height: 48px;
+        background-color: #F9F9F9;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 16px;
+        color: #666666;
+        padding: 0 15px;
+        cursor: pointer;
+
+        &::after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f0d7";
+            border: none;
+            font-size: 12px;
+            color: #666666;
+            margin: 0 5px;
+        }
+    }
+}
+
+.side-links {
+    border: 1px solid #DDDDDD;
+    display: block;
+
+    @include sm {
+        display: none;
+    }
+
+}
+
+.side-li {
+    &:after {
+        height: 1px;
+        content: "";
+        width: 200px;
+        display: block;
+        margin-right: 34px;
+        margin-left: 26px;
+        background-color: #F0F0F0;
+
+        @include sm {
+            width: calc(100% - 60px);
+        }
+    }
+
+    &:last-of-type {
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.side-link {
+    padding: 17px 10px 9.5px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    color: #868686;
+    @include transition(all 0.3s ease-in-out);
+
+    svg {
+        width: 28px;
+    }
+
+    path {
+        fill: #868686;
+        @include transition(all 0.3s ease-in-out);
+    }
+
+    &:hover {
+        color: $gold;
+
+        path {
+            fill: $gold;
+        }
+    }
+
+    &.active {
+        color: $gold;
+
+        path {
+            fill: $gold;
+        }
+    }
+}
+
+.req-head {
+    width: 100%;
+    border-bottom: 1px solid #DEDEDE;
+    padding-bottom: 12px;
+
+    @include sm {
+        margin-top: 40px;
+    }
+}
+
+.req-title {
+    font-size: 20px;
+    color: #283957;
+    padding: 0 7px;
+    border-right: 3px solid #283957;
+
+    #{$ltr} & {
+        border-left: 3px solid #283957;
+        border-right: none;
+    }
+}
+
+.req-body {
+    display: flex;
+    flex-direction: column;
+
+    &.no-req {
+        min-height: 400px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.no-req {
+    font-size: 18px;
+    color: #9A9A9A;
+}
+
+.add-req {
+    margin-top: 20px;
+    width: 270px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: $gold;
+    border: 2px solid $gold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    @include transition(all 0.3s ease-in-out);
+
+    &.add-btn {
+        margin-right: auto;
+
+        @include sm {
+            margin: 20px auto 0;
+        }
+
+        #{$ltr} & {
+            margin-right: 0;
+            margin-left: auto;
+
+            @include sm {
+                margin: 20px auto 0;
+            }
+        }
+    }
+
+    &:hover {
+        background-color: transparent;
+        color: $gold;
+    }
+}
+
+.add-prob-form {
+    margin-top: 30px;
+}
+
+.add-input {
+    width: 100%;
+    height: 48px;
+    border-radius: 24px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    color: $text;
+    border: 1px solid #979797;
+    text-align: right;
+    @include transition(all 0.3s ease-in-out);
+
+    @include xs {
+        margin-bottom: 15px;
+    }
+
+    &::placeholder {
+        color: $text;
+    }
+
+    #{$ltr} & {
+        text-align: left;
+    }
+
+    &:focus {
+        border-color: $gold;
+    }
+
+
+    &.add-area {
+        height: 205px;
+        border-radius: 15px;
+        padding: 15px;
+        width: 100%;
+        resize: none;
+
+        @include xs {
+            height: 150px;
+        }
+    }
+
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+
+}
+
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+
+    &:hover {
+        .upload-btn {
+            border-color: $gold;
+        }
+    }
+
+    .upload-btn {
+        width: 100%;
+        height: 174px;
+        border: 1px dashed #13294B;
+        border-radius: 3px;
+        background-color: transparent;
+        font-size: 16px;
+        cursor: pointer;
+        @include transition(all 0.3s ease-in-out);
+    }
+
+    .input-head {
+        font-size: 18px;
+        color: #283957;
+        margin-bottom: 20px;
+    }
+
+    .input-text {
+        font-size: 14px;
+        color: #9B9B9B;
+
+        a {
+            position: relative;
+            z-index: 999;
+            font-size: 14px;
+            color: #13294B;
+            @include transition(all 0.3s ease-in-out);
+
+            &:hover,
+            &:focus {
+                color: $gold;
+            }
+        }
+    }
+
+    input[type=file] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        cursor: pointer;
+        width: 100%;
+    }
+}
+
+
+.problem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-bottom: 1px solid #DEDEDE;
+
+    @include sm {
+        flex-wrap: wrap;
+    }
+
+    &:last-of-type {
+        border-bottom: 0;
+    }
+
+    .main-info {
+        display: flex;
+        align-items: center;
+
+        @include sm {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .prob-img {
+        width: 95px;
+        height: 95px;
+        border-radius: 3px;
+        overflow: hidden;
+        margin-left: 15px;
+
+        img {
+            vertical-align: middle;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #{$ltr} & {
+            margin: 0;
+            margin-right: 15px;
+        }
+    }
+
+    .prob-name {
+        margin-bottom: 15px;
+        font-size: 17px;
+        color: #283957;
+    }
+
+    .prob-status {
+        font-size: 17px;
+        color: $gold;
+    }
+
+    .review {
+        width: 165px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: $gold;
+        border: 2px solid $gold;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover {
+            background-color: transparent;
+            color: $gold;
+        }
+    }
+
+    .prob-tools {
+        display: flex;
+        align-items: center;
+
+        a {
+            font-size: 15px;
+            color: #13294B;
+            @include transition(all 0.3s ease-in-out);
+
+            svg {
+                width: 25px;
+            }
+        }
+    }
+
+    .delete-prob {
+
+
+        &:hover {
+            color: #ff0000;
+        }
+    }
+
+    .edit-prob {
+        margin-right: 40px;
+
+        #{$ltr} & {
+            margin: 0;
+            margin-left: 40px;
+        }
+
+        &:hover {
+            color: #149a14;
+        }
+    }
+}
+
+.my-list {
+    .prob-name {
+        margin-bottom: 0;
+    }
+
+    .info {
+        font-size: 15px;
+        color: $text;
+        margin-top: 10px;
+
+        span {
+            color: $gold;
+        }
+    }
+
+    .problem {
+        @include sm {
+            justify-content: center;
+            text-align: center;
+            flex-wrap: nowrap;
+            flex-direction: column;
+
+            .main-info {
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .prob-img {
+                margin-bottom: 15px;
+
+                #{$ltr} & {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
